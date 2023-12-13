@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Young Serif", serif;
+    font-size: 62.5%;
+}
+
+.bg {
+    min-height: 100vh;
+    background: url("./image2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 3.5rem;
+}
+
+:root {
+    /* Base font size */
+    font-size: 10px;
+
+    /* Set neon color */
+    --neon-text-color: #e8619d;
+    --neon-border-color: lightsteelblue;
+}
+
+.bg .header h1 {
+    font-family: "Tilt Neon", sans-serif;
+    display: inline-block;
+    font-size: 7rem;
+    font-weight: 100;
+    color: white;
+    background-color: #5b6d91be;
+    padding: 2rem 3.5rem;
+    margin-top: 1rem;
+    border: 0.4rem solid #fff;
+    border-radius: 2rem;
+    animation: flicker 1.5s infinite alternate;
+}
+
+h1::-moz-selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+}
+
+h1::selection {
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+}
+
+h1:focus {
+    outline: none;
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color), 0 0 10rem var(--neon-text-color);
+
+        box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.header p {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 2rem;
+    color: rgb(171, 88, 171);
+    border: 2.5px solid lightsteelblue;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 1rem;
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 2rem plum, 0 0 4rem plum, 0 0 6rem plum, 0 0 8rem plum,
+        0 0 10rem plum;
+    box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color),
+        0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+}
+
+/* ################################################################################################  */
+
+.layout {
+    display: grid;
+    grid-template-rows: repeat(3, 10rem);
+    grid-template-columns: repeat(3, 10rem);
+    place-content: center;
+    margin-top: 1rem;
+}
+
+.removeTop {
+    border-top: none;
+}
+
+.removeBottom {
+    border-bottom: none;
+}
+
+.removeLeft {
+    border-left: none;
+}
+
+.removeRight {
+    border-right: none;
+}
+
+.layout div {
+    border: 2.5px solid #8d94a6;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 7px #b67ca7;
+    font-size: 7.5rem;
+    color: #8d94a6;
+    background-color: #5d6e92e9;
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 2rem #86ccd4, 0 0 4rem #86ccd4, 0 0 6rem #86ccd4, 0 0 8rem #86ccd4,
+        0 0 10rem #86ccd4;
+}
+
+.layout div:hover {
+    background-color: #7d769c;
+    cursor: pointer;
+}
+
+.bg button[type="reset"] {
+    font-family: "Poppins", sans-serif;
+    border: 3px solid #5b6d91be;
+    background-color: #aac8d4e1;
+    color: #131313;
+    border-radius: 1rem;
+    min-height: 100%;
+    width: 130px;
+    font-size: 2.5rem;
+    margin: 2rem auto;
+    font-weight: bold;
+    padding: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.bg button[type="reset"]:hover {
+    background-color: #aac8d4;
+}
+
+/* #####################################################################  */
+
+.sound-control {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.sound-control label {
+    font-family: "Tilt Neon", sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-right: 10px;
+}
+
+.sound-control input {
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.header img {
+    border: 2px solid #aac8d4;
+    border-radius: 2rem;
+    height: 30px;
+    display: inline;
+    position: absolute;
+}
+
+.header .imagea {
+    right: -7px;
+    display: none;
+}
+
+.header .imageb {
+    right: -7px;
+    display: none;
+}
+
+.header .sound-control input[type="checkbox"]:checked ~ .imageb {
+    display: inline;
+}
+
+.header .sound-control input[type="checkbox"]:not(:checked) ~ .imagea {
+    display: inline;
+}
+
+/* #################################################################################  */
+
+/* Responsive Font Size */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 50%;
+    }
+
+    .bg .header h1 {
+        font-size: 5rem;
+    }
+
+    .header p {
+        font-size: 2rem;
+    }
+
+    .layout div {
+        font-size: 7rem;
+    }
+
+    .bg button[type="reset"] {
+        font-size: 1.5rem;
+    }
+}
+
+.winning-box {
+    animation: glow 2s ease-in-out both infinite;
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #00eaff;
+        box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #00eaff;
+    }
+    50% {
+        text-shadow: none;
+        box-shadow: none;
+    }
+}
